@@ -10,7 +10,6 @@ Source0: http://freeunix.dyndns.org:8088/ftp_site/pub/unix/acpitool/%name-%versi
 License: GPL 
 Group: System/Kernel and hardware
 Url: http://freeunix.dyndns.org:8088/site2/acpitool.shtml
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 
 %description
