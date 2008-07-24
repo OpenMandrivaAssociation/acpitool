@@ -1,12 +1,13 @@
 %define name acpitool
-%define version 0.4.7
-%define release %mkrel 3
+%define version 0.5.0
+%define release %mkrel 1
 
 Summary: A Linux ACPI client 
 Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://freeunix.dyndns.org:8088/ftp_site/pub/unix/acpitool/%name-%version.tar.bz2
+Patch: acpitool-string.patch
 License: GPL 
 Group: System/Kernel and hardware
 Url: http://freeunix.dyndns.org:8088/site2/acpitool.shtml
@@ -18,7 +19,8 @@ It's a small command-line application,
 intended to be a replacement for the apm tool.
 
 %prep
-%setup -q
+%setup -q -n %name-0.5
+%patch0 -p0
 
 %build
 %configure2_5x
@@ -26,7 +28,7 @@ intended to be a replacement for the apm tool.
 perl -pi -e "s|/usr/local|$RPM_BUILD_ROOT/usr|g" Makefile
 perl -pi -e "s|man/man1|share/man/man1|g" Makefile
 
-%make
+make
 
 %install
 rm -rf $RPM_BUILD_ROOT
