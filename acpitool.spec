@@ -7,7 +7,7 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://freeunix.dyndns.org:8088/ftp_site/pub/unix/acpitool/%name-%version.tar.bz2
-Patch: acpitool-string.patch
+Patch0: acpitool-string.patch
 License: GPL 
 Group: System/Kernel and hardware
 Url: http://freeunix.dyndns.org:8088/site2/acpitool.shtml
