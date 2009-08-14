@@ -1,5 +1,5 @@
 %define name acpitool
-%define version 0.5.0
+%define version 0.5.1
 %define release %mkrel 1
 
 Summary: A Linux ACPI client 
@@ -7,7 +7,6 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://freeunix.dyndns.org:8088/ftp_site/pub/unix/acpitool/%name-%version.tar.bz2
-Patch0: acpitool-string.patch
 License: GPL 
 Group: System/Kernel and hardware
 Url: http://freeunix.dyndns.org:8088/site2/acpitool.shtml
@@ -19,8 +18,7 @@ It's a small command-line application,
 intended to be a replacement for the apm tool.
 
 %prep
-%setup -q -n %name-0.5
-%patch0 -p0
+%setup -q -n %name-%{version}
 
 %build
 %configure2_5x
