@@ -1,6 +1,6 @@
 %define name acpitool
 %define version 0.5.1
-%define release %mkrel 2
+%define release 3
 
 Summary: A Linux ACPI client 
 Name: %{name}
